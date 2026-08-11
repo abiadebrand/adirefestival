@@ -18,11 +18,21 @@ export function Orders() {
       <ol className="container order-grid scroll-reveal" aria-label="Abíádé Adire Festival ticket categories">
         {orderItems.map(function renderOrderItem(item) {
           return (
-            <li className="ticket-card" key={item.step}>
+            <li className={`ticket-card ticket-card--${item.tier}`} key={item.step}>
               <span className="ticket-card__number">{item.step}</span>
               <div className="ticket-card__copy">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <div className="ticket-card__heading">
+                  <h3>{item.title}</h3>
+                  <p className="ticket-card__price">{item.price}</p>
+                </div>
+                <p>{item.intro}</p>
+                <p className="ticket-card__benefits-title">Benefits include:</p>
+                <ol className="ticket-card__benefits">
+                  {item.benefits.map((benefit) => (
+                    <li key={benefit}>{benefit}</li>
+                  ))}
+                </ol>
+                <p className="ticket-card__closing">{item.closing}</p>
               </div>
               <a className="button button--accent ticket-card__button" href={item.href} target="_blank" rel="noopener noreferrer" title={item.linkTitle}>
                 Purchase Ticket

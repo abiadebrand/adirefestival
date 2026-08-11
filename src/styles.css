@@ -35,6 +35,12 @@
     --color-muted-light: rgb(48 35 30 / 0.72);
     --color-line-dark: rgb(242 229 201 / 0.22);
     --color-line-light: rgb(48 35 30 / 0.2);
+    --color-ticket-vip-accent: #e2b632;
+    --color-ticket-vip-surface: #282019;
+    --color-ticket-silver-accent: #d4d8e2;
+    --color-ticket-silver-surface: #18213d;
+    --color-ticket-campus-accent: #50b86a;
+    --color-ticket-campus-surface: #17271c;
 
     --font-body:
         Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -1278,14 +1284,56 @@ h3 {
     gap: var(--space-6);
     min-block-size: 20rem;
     padding: var(--space-6);
-    border: 1px solid rgb(242 229 201 / 0.2);
-    background: rgb(21 21 21 / 0.32);
+    border: 1px solid var(--color-line-dark);
+    border-block-start-width: 4px;
+    color: var(--color-cream);
+    background: var(--color-charcoal);
+    transition:
+        transform var(--duration-fast) var(--ease-out),
+        opacity var(--duration-fast) var(--ease-out);
+}
+
+.ticket-card--vip {
+    border-color: rgb(226 182 50 / 0.72);
+    border-block-start-color: var(--color-ticket-vip-accent);
+    background: var(--color-ticket-vip-surface);
+    transform: translateY(calc(var(--space-2) * -1));
+}
+
+.ticket-card--silver {
+    border-color: rgb(212 216 226 / 0.42);
+    border-block-start-color: var(--color-ticket-silver-accent);
+    background: var(--color-ticket-silver-surface);
+}
+
+.ticket-card--campus {
+    border-color: rgb(80 184 106 / 0.42);
+    border-block-start-color: var(--color-ticket-campus-accent);
+    background: var(--color-ticket-campus-surface);
 }
 
 .ticket-card__number {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    border: 1px solid currentColor;
     font-family: var(--font-display);
     font-size: var(--text-lg);
-    color: var(--color-yellow);
+}
+
+.ticket-card--vip .ticket-card__number {
+    color: var(--color-charcoal);
+    background: var(--color-ticket-vip-accent);
+    border-color: var(--color-ticket-vip-accent);
+}
+
+.ticket-card--silver .ticket-card__number {
+    color: var(--color-ticket-silver-accent);
+}
+
+.ticket-card--campus .ticket-card__number {
+    color: var(--color-ticket-campus-accent);
 }
 
 .ticket-card__copy {
@@ -1299,8 +1347,86 @@ h3 {
     color: var(--color-muted-dark);
 }
 
+.ticket-card__heading {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.ticket-card__price {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+}
+
+.ticket-card--vip .ticket-card__price,
+.ticket-card--vip .ticket-card__benefits-title {
+    color: var(--color-ticket-vip-accent);
+}
+
+.ticket-card--silver .ticket-card__price,
+.ticket-card--silver .ticket-card__benefits-title {
+    color: var(--color-ticket-silver-accent);
+}
+
+.ticket-card--campus .ticket-card__price,
+.ticket-card--campus .ticket-card__benefits-title {
+    color: var(--color-ticket-campus-accent);
+}
+
+.ticket-card__benefits-title {
+    font-weight: 700;
+}
+
+.ticket-card__benefits {
+    display: grid;
+    gap: var(--space-2);
+    padding-inline-start: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-muted-dark);
+}
+
+.ticket-card__closing {
+    margin-block-start: var(--space-2);
+    font-style: italic;
+}
+
 .ticket-card__button {
     inline-size: 100%;
+}
+
+.ticket-card--vip .ticket-card__button {
+    color: var(--color-charcoal);
+    background: var(--color-ticket-vip-accent);
+    border-color: var(--color-ticket-vip-accent);
+}
+
+.ticket-card--vip .ticket-card__button:hover {
+    color: var(--color-ticket-vip-accent);
+    background: transparent;
+    border-color: var(--color-ticket-vip-accent);
+}
+
+.ticket-card--silver .ticket-card__button {
+    color: var(--color-indigo);
+    background: var(--color-ticket-silver-accent);
+    border-color: var(--color-ticket-silver-accent);
+}
+
+.ticket-card--silver .ticket-card__button:hover {
+    color: var(--color-ticket-silver-accent);
+    background: transparent;
+    border-color: var(--color-ticket-silver-accent);
+}
+
+.ticket-card--campus .ticket-card__button {
+    color: var(--color-charcoal);
+    background: var(--color-ticket-campus-accent);
+    border-color: var(--color-ticket-campus-accent);
+}
+
+.ticket-card--campus .ticket-card__button:hover {
+    color: var(--color-ticket-campus-accent);
+    background: transparent;
+    border-color: var(--color-ticket-campus-accent);
 }
 
 .contact {

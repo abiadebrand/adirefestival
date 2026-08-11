@@ -43,10 +43,16 @@ export interface CraftItem {
   Icon: LucideIcon;
 }
 
+export type TicketTier = "vip" | "silver" | "campus";
+
 export interface OrderItem {
   step: string;
+  tier: TicketTier;
   title: string;
-  description: string;
+  price: string;
+  intro: string;
+  benefits: readonly string[];
+  closing: string;
   href: string;
   linkTitle: string;
 }
