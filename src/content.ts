@@ -1,4 +1,4 @@
-import { Drum, Droplets, Mic, Shirt, Waves } from "lucide-react";
+import { Drum, Droplets, Landmark, Mic, Shirt, Waves } from "lucide-react";
 import { assets } from "./assets";
 import type { CraftItem, HeroSlideItem, LookbookItem, NavItem, OrderItem, PatternItem, ProfessionalImageItem } from "./types";
 
@@ -206,6 +206,11 @@ export const craftItems = [
     term: "Cultural Displays",
     description: "Vibrant dance, drumming, stage performance, chants, and oratory bring Yoruba heritage into full view.",
     Icon: Drum
+  },
+  {
+    term: "Museum of Culture",
+    description: "A dedicated cultural space connecting guests with Yoruba history, material culture, artistic heritage, and the wider stories that give Adire its meaning across generations.",
+    Icon: Landmark
   },
   {
     term: "Symposium",
