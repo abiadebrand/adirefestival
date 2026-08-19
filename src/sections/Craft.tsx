@@ -6,10 +6,10 @@ export function Craft() {
       <div className="container craft-heading scroll-reveal">
         <p className="eyebrow">THE EXPERIENCE</p>
         <h2 id="craft-title">WHAT AWAITS YOU</h2>
-        <p>Three headline experiences bring the festival to life through fashion, performance, and Symposium.</p>
+        <p>Four headline experiences bring the festival to life through fashion, cultural expression, heritage, and dialogue.</p>
       </div>
 
-      <ol className="container craft-feature-grid" aria-label="Three main Abiade Adire Festival events">
+      <ol className="container craft-feature-grid" aria-label="Four main Abiade Adire Festival experiences">
         {craftItems.map(function renderCraftItem(item, index) {
           return (
             <li className="craft-feature-card scroll-reveal" key={item.term}>

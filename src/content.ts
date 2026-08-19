@@ -1,4 +1,4 @@
-import { Drum, Droplets, Mic, Shirt, Waves } from "lucide-react";
+import { Drum, Droplets, Landmark, Mic, Shirt, Waves } from "lucide-react";
 import { assets } from "./assets";
 import type { CraftItem, HeroSlideItem, LookbookItem, NavItem, OrderItem, PatternItem, ProfessionalImageItem } from "./types";
 
@@ -208,6 +208,11 @@ export const craftItems = [
     Icon: Drum
   },
   {
+    term: "Museum of Culture",
+    description: "A dedicated cultural space connecting guests with Yoruba history, material culture, artistic heritage, and the wider stories that give Adire its meaning across generations.",
+    Icon: Landmark
+  },
+  {
     term: "Symposium",
     description: "The Symposium is a platform for dialogue, discovery, and collaboration around Nigeria’s iconic hand‑dyed textile tradition. Scholars, artisans, and designers gather to explore Adire’s cultural heritage, modern applications, and its role in empowering communities and shaping global fashion narratives.",
     Icon: Mic
@@ -217,23 +222,59 @@ export const craftItems = [
 export const orderItems = [
   {
     step: "01",
-    title: "Campus Culture Entry",
-    description: "Start with festival access for the core culture, craft, and community experience.",
-    href: "https://paystack.shop/pay/campuscultureentry",
-    linkTitle: "Purchase a Campus Culture Entry ticket on Paystack"
+    tier: "vip",
+    title: "VIP Ticket",
+    price: "₦15,000",
+    intro: "Step into an unforgettable cultural experience with exclusive VIP access.",
+    benefits: [
+      "Front-row runway seating at the Adire Fashion Show",
+      "Welcome drinks & refreshments on arrival",
+      "Exclusive Adire souvenir crafted for VIP guests",
+      "Dedicated VIP entrance & seamless check-in",
+      "Professional photographs & content captured at the event",
+      "Access to Museum of Culture",
+      "Closer view of guest artists and direct connection with symposium panelists",
+      "Access to a private VIP networking lounge",
+      "Priority entry to select festival activities",
+      "Special gifts from participating brands & designers"
+    ],
+    closing: "Celebrate Yoruba culture, creativity, and community in style. This is more than a ticket — it’s a premium cultural experience.",
+    href: "https://paystack.shop/pay/adiregoldcircle",
+    linkTitle: "Purchase an Abiade Adire Festival VIP ticket on Paystack"
   },
   {
     step: "02",
-    title: "Adire Silver Circle",
-    description: "A stronger festival package for guests who want closer access to the program.",
+    tier: "silver",
+    title: "Silver Circle Ticket",
+    price: "₦7,000",
+    intro: "Join the celebration of culture, creativity, and community with your Silver Circle access.",
+    benefits: [
+      "Priority seating allocation (earlier buyers enjoy front-row advantage)",
+      "Light refreshments during the festival",
+      "Festival souvenirs to take home",
+      "Access to cultural performances and exhibitions",
+      "Entry into symposium sessions with thought-provoking panelists",
+      "Immersion in the vibrant community celebrating Yoruba heritage and innovation"
+    ],
+    closing: "Secure your seat early — limited availability. This is more than a ticket; it’s your gateway into the Adire experience.",
     href: "https://paystack.shop/pay/adiresilvercircle",
-    linkTitle: "Purchase an Adire Silver Circle ticket on Paystack"
+    linkTitle: "Purchase an Abiade Adire Festival Silver Circle ticket on Paystack"
   },
   {
     step: "03",
-    title: "Adire Gold Circle",
-    description: "A premium route into the celebration, designed around presence and priority.",
-    href: "https://paystack.shop/pay/adiregoldcircle",
-    linkTitle: "Purchase an Adire Gold Circle ticket on Paystack"
+    tier: "campus",
+    title: "Campus Entry Ticket",
+    price: "₦5,000",
+    intro: "Experience the festival spirit at a student-friendly price.",
+    benefits: [
+      "General seating at the Adire Fashion Show",
+      "Access to cultural performances and exhibitions",
+      "Entry into symposium sessions with inspiring panelists",
+      "Participation in festival activities and community experiences",
+      "A chance to connect with peers and immerse yourself in Yoruba heritage"
+    ],
+    closing: "Affordable, vibrant, and inclusive — the Campus Entry ticket is your gateway to culture, creativity, and community.",
+    href: "https://paystack.shop/pay/campuscultureentry",
+    linkTitle: "Purchase an Abiade Adire Festival Campus Entry ticket on Paystack"
   }
 ] satisfies readonly OrderItem[];
