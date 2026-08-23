@@ -1624,6 +1624,10 @@ h3 {
 }
 
 @media (max-width: 42rem) {
+    :root {
+        --header-height: 4rem;
+    }
+
     .promo-banner__date {
         display: none;
     }
