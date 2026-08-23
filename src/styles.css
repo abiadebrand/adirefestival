@@ -1548,8 +1548,7 @@ h3 {
 
 @media (max-width: 64rem) {
     .primary-nav,
-    .header-actions .text-link,
-    .header-actions .button {
+    .header-actions {
         display: none;
     }
 
