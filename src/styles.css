@@ -1548,8 +1548,7 @@ h3 {
 
 @media (max-width: 64rem) {
     .primary-nav,
-    .header-actions .text-link,
-    .header-actions .button {
+    .header-actions {
         display: none;
     }
 
@@ -1624,6 +1623,14 @@ h3 {
 }
 
 @media (max-width: 42rem) {
+    :root {
+        --header-height: 4rem;
+    }
+
+    .promo-banner__date {
+        display: none;
+    }
+
     .craft-feature-grid {
         grid-template-columns: 1fr;
     }
