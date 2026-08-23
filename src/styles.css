@@ -1627,7 +1627,8 @@ h3 {
         --header-height: 4rem;
     }
 
-    .promo-banner__date {
+    .promo-banner__date,
+    .promo-banner__title {
         display: none;
     }
 
