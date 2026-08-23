@@ -1624,6 +1624,10 @@ h3 {
 }
 
 @media (max-width: 42rem) {
+    .promo-banner__date {
+        display: none;
+    }
+
     .craft-feature-grid {
         grid-template-columns: 1fr;
     }
