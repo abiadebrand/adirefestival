@@ -4,8 +4,8 @@ import type { CraftItem, HeroSlideItem, LookbookItem, NavItem, OrderItem, Patter
 
 export const links = {
   shopify: "https://abiade-adire.myshopify.com",
-  festivalForm: "https://forms.gle/qWiT83pu4PL88bsu5",
-  academyForm: "https://forms.gle/VU89eCKCrFtW3weZ7"
+  festivalForm: "https://docs.google.com/forms/d/e/1FAIpQLScjVQnCC8UPNSv1fPqj6UPzlFrkhxRgek3n4YIWOZ3gHMyDLw/viewform?usp=header",
+  academyForm: "https://docs.google.com/forms/d/e/1FAIpQLSclty8GvOEwHRbMCtRSQNyyIFujNBD48mMNNg7E8RUpfMB4Tw/viewform?usp=header"
 } as const;
 
 export const navItems = [
